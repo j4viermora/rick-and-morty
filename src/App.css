@@ -1,0 +1,24 @@
+:root {
+    --rick-green: #A0C267;
+    --morty-purple: #8B67C9;
+    --platinum: #E3E3E3;
+    --nyanza: #E8FACA
+}
+
+
+html {
+    background-color: var(--morty-purple) !important;
+}
+
+h2.title{
+    color: white;
+}
+p.title{
+    color: white;
+}
+
+
+.center{
+    display: flex;
+    justify-content: center;
+}

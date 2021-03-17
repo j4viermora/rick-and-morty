@@ -1,10 +1,18 @@
 import React from 'react';
-import './bulma.css'
+import { Provider } from 'react-redux';
+
+import store from './store/store'
+import { AppRouters } from './routers/AppRouters';
+
+import './App.css';
+import './bulma.css';
 
 function App() {
   return (
     <>
-        <h2>Hola mundo</h2>  
+       <Provider store={ store } >
+            <AppRouters/>
+       </Provider>
     </>
   );
 }
