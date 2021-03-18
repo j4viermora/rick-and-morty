@@ -1,3 +1,4 @@
+
 :root {
     --rick-green: #A0C267;
     --morty-purple: #8B67C9;
@@ -5,10 +6,10 @@
     --nyanza: #E8FACA
 }
 
-
-html {
-    background-color: var(--morty-purple) !important;
+html{
+    background-color: var(--morty-purple);
 }
+
 
 h2.title{
     color: white;

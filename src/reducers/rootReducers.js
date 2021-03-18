@@ -5,6 +5,6 @@ import episodesReducers from './apisodesReducers';
 
 export const rootReducers = combineReducers({
     characters: charactersReducer,
-    apisoder: episodesReducers,
+    apisoders: episodesReducers,
     user: userReducer
 })

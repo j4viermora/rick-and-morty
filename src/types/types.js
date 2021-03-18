@@ -1,5 +1,6 @@
 export const types = {
 
-    GetInfo: "[Homa] get info for home"
-    
+    GetInfo: "[Home] get info for home",
+    characterSearch:" [Home] set result search",
+    GetEpisodes: "[Episodes] get episodes"
 }

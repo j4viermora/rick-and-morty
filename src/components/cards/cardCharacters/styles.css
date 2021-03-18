@@ -4,3 +4,11 @@
     border-radius: 0.5rem;
     color: white;
 }
+#card2{
+    color: black;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+#card2 p{
+    color: black;
+}

@@ -5,6 +5,7 @@ import {
     Redirect,
     Switch
 } from 'react-router-dom'
+import { Footer } from '../components/footer';
 
 import { Navbar } from '../components/navbar/Navbar';
 import { Episodes } from '../pages/episodes/Episodes';
@@ -21,12 +22,13 @@ export const AppRouters = () => {
                      <Switch>
                         
                         <Route  exact path="/character" component={ Home }/>
-                        <Route  exact path="/episodes" component={ Episodes }/>
+                        <Route  exact path="/episode" component={ Episodes }/>
                         <Route  exact path="/search" component={ SearchPerson } />  
                                      
                         <Redirect to="/character" />            
                     </Switch>
                 </div>
+                <Footer />
            </Router>
         </>
     )

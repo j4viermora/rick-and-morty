@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const Col = ( { children } ) => {
+export const Col = ( { children, fr } ) => {
     return (
-        <div className="column is-one-third">
+        <div className={`column ${fr}`}>
            { children }
         </div>
     )

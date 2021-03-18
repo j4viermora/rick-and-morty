@@ -1,7 +1,8 @@
 import { types } from "../types/types";
 
 const intialState = {
-    
+    results: null,
+    info: null
 }
 
 export const charactersReducer = ( state = intialState , action ) => {
@@ -11,6 +12,11 @@ export const charactersReducer = ( state = intialState , action ) => {
                 return{
                     ...state,
                     ...action.payload
+                }
+            case types.characterSearch:
+                return{
+                    ...state,
+                    results : action.payload
                 }
             default:
                 return state

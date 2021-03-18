@@ -5,11 +5,13 @@ import './styles.css'
 export const CardCharacters = ( {
     img,
     name,
-    status
+    status,
+    date,
+    
 } ) => {
     return (
-        <Col >
-            <div id="card">
+        <Col fr="is-one-third" >
+            <div id={ img ? "card" : "card2" } >
                 <div className="card-image">
                     <figure>
                         <img style={{ width: "100vw" }} src={img} alt={img} />
@@ -22,7 +24,7 @@ export const CardCharacters = ( {
                     <div className="content">
                         { status }
                     <br/>
-                    <time>11:09 PM - 1 Jan 2016</time>
+                    <time>{ date }</time>
                     </div>
                 </div>
             </div>

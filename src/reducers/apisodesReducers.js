@@ -1,10 +1,16 @@
+import { types } from "../types/types"
 
-const apisodesReducers = ( state = {}, action ) => {
+const apisodesReducers = ( state = {
+    info: null,
+    results: null
+} , action ) => {
 
         switch( action.type ){
-            case 'dele':
+            case types.GetEpisodes:
                 return {
-                    ...state
+                    ...state,
+                    info: action.payload.info,
+                    results: action.payload.results
                 }
             default:
                 return state
