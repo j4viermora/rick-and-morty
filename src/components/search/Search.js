@@ -1,24 +1,22 @@
 import { useFormik } from 'formik'
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { useHistory, useLocation } from 'react-router';
+import { useLocation } from 'react-router';
 import { startSearch } from '../../actions/infoApi';
 import validate from '../../constant/validate';
 
 export const Search = () => {
 
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
-    // const location = useLocation()
-    // console.log(location)
-    const history = useHistory()
+    const { pathname } = useLocation()
 
     const formik = useFormik({
         initialValues: {
             search:""
         },
         validate,
-        onSubmit: value => history.push( `?q=${ value.search }` )  
+        onSubmit: value => dispatch( startSearch( value, pathname.substring(1) ) )   
     });
 
     return (

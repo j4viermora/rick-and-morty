@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Hello this is the rick and morty app
+In this app you will can search all about rick and morty, if you want dowload code and play with it, is great, something will be refactoring in the future.
 
 ## Available Scripts
 
@@ -22,6 +23,4 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-
-### `yarn build` fails to minify
 

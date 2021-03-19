@@ -7,10 +7,11 @@ export const CardCharacters = ( {
     name,
     status,
     date,
+    size,
     
 } ) => {
     return (
-        <Col fr="is-one-third" >
+        <Col fr={size} >
             <div id={ img ? "card" : "card2" } >
                 <div className="card-image">
                     <figure>

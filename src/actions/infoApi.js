@@ -33,3 +33,27 @@ const finishSearch = ( data ) => ({
     type : types.characterSearch,
     payload: data
 });
+
+
+
+export const startSearchInApi = ( queryString ) => {
+
+    return async( dispath ) => {
+        
+        const toSearch = queryString.toLowerCase()
+        const resp = await simpleFetch( `character/?name=${ encodeURI(toSearch) }` )
+        console.log(toSearch)
+        const data = await resp.json()
+
+        console.log(data.results)
+        dispath( setSearchFromApi( data.results ) )
+
+    }
+}
+
+const setSearchFromApi = ( data ) => {
+    return{
+        type : types.setSearchApi,
+        payload: data
+    }
+}

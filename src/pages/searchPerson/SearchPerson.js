@@ -1,29 +1,49 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { CardCharacters } from '../../components/cards/cardCharacters/CardCharacters'
 import { Col } from '../../components/layout/Col'
 import { Row } from '../../components/layout/Row'
-import { Search } from '../../components/search/Search'
+import { SearchCharacter } from '../../components/searchCharacters'
+
+
+
 
 export const SearchPerson = () => {
+
+
+    const { searchPage } = useSelector( state => state.characters )   
+    
     return (
         <div className="mt-5 container" style={{ height: "100vh"}}>
          
          <Row>
-                {/* left column */}
-
                <Col>
-               <h2 className="title">Search </h2>
-                <div className="mb-5">
-                <Search/>
-                </div>
-                <div className="notification is-primary is-light">
-                    <p>In this page you can search all character´s</p>
-                </div>
-               </Col>
+                <h2 className="title">Search </h2>
+                    <hr/>
+                    <div className="mb-5">
+                    <SearchCharacter/>
+                    </div>
+                    <div className="notification is-primary is-light">
+                        <p>In this page you can search all character´s</p>
+                    </div>
+                </Col>
+                <Col>
+                    <h2 className="title">Results:</h2>
+                    <hr/>
+                    {
+                        searchPage?.map( result => (
 
-                {/* right column */}
+                            <CardCharacters 
+                            key={ result.id }
+                            img={ result.image }
+                            name={result.name}
+                            status={ result.status }
+                            // size={ 'is-half' }
+                            />
 
-               <Col>             
-               </Col>
+                        ) )
+                    }
+                </Col>
          </Row>
         </div>
     )

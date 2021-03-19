@@ -28,6 +28,7 @@ export const Episodes = () => {
                results?.slice(0,18).map( item => (
                     
                   <CardCharacters 
+                    size={ "is-one-third" }
                     key={ item.id }
                     name = {item.name}
                     date ={ item.air_date }

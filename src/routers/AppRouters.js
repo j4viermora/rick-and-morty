@@ -28,7 +28,7 @@ export const AppRouters = () => {
                         <Redirect to="/character" />            
                     </Switch>
                 </div>
-                <Footer />
+                {/* <Footer /> */}
            </Router>
         </>
     )

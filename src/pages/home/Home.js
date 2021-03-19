@@ -48,8 +48,9 @@ export const Home = () => {
         </Row>       
             <Row>  
                   {
-                     results?.slice(0,18).map( item => (             
+                     results?.map( item => (             
                          <CardCharacters
+                            size={"is-one-quarter"}
                             key={ item.id }
                             img={ item.image }
                             name={ item.name } 
