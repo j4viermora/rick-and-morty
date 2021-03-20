@@ -5,7 +5,7 @@ import {
     Redirect,
     Switch
 } from 'react-router-dom'
-import { Footer } from '../components/footer';
+
 
 import { Navbar } from '../components/navbar/Navbar';
 import { Episodes } from '../pages/episodes/Episodes';
@@ -28,7 +28,7 @@ export const AppRouters = () => {
                         <Redirect to="/character" />            
                     </Switch>
                 </div>
-                {/* <Footer /> */}
+              
            </Router>
         </>
     )

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useFormik } from 'formik';
 import  {useHistory,useLocation } from 'react-router';
 import  queryString from 'query-string';
@@ -14,6 +14,9 @@ export const SearchCharacter = ( ) => {
     const{ name = "" } = queryString.parse( location.search )    
     const dispatch = useDispatch()
     
+    useEffect(()=>{
+        dispatch( startSearchInApi( name ) )
+    },[name, dispatch])
 
     const formik = useFormik({
         initialValues:{
@@ -21,7 +24,6 @@ export const SearchCharacter = ( ) => {
         },
         onSubmit: (value) => {
             history.push( `?name=${value.searchApi}` );
-            dispatch( startSearchInApi( value.searchApi ) )
         }
     });
 

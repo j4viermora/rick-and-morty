@@ -26,23 +26,41 @@ export const SearchPerson = () => {
                     <div className="notification is-primary is-light">
                         <p>In this page you can search all character´s</p>
                     </div>
+                    <Row>
+                     {
+                                searchPage?.slice( 10,20 ).map( result => (
+
+                                    <CardCharacters 
+                                    key={ result.id }
+                                    img={ result.image }
+                                    name={result.name}
+                                    status={ result.status }
+                                    size={ "is-half" }
+                                    />
+
+                                ) )
+                            }
+                    </Row>
                 </Col>
                 <Col>
                     <h2 className="title">Results:</h2>
                     <hr/>
-                    {
-                        searchPage?.map( result => (
+                    <Row>
+                            
+                            {
+                                searchPage?.slice( 0,10 ).map( result => (
 
-                            <CardCharacters 
-                            key={ result.id }
-                            img={ result.image }
-                            name={result.name}
-                            status={ result.status }
-                            // size={ 'is-half' }
-                            />
+                                    <CardCharacters 
+                                    key={ result.id }
+                                    img={ result.image }
+                                    name={result.name}
+                                    status={ result.status }
+                                    size={ "is-half" }
+                                    />
 
-                        ) )
-                    }
+                                ) )
+                            }
+                    </Row>
                 </Col>
          </Row>
         </div>
