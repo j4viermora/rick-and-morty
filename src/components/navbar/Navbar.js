@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-
-import './style.css'
 
 export const Navbar = () => {
   
+  const [ active, setActive ] = useState(false);
+
+  const handleBurguer = () => {
+
+        setActive( !active )
+
+  };
   
   return (
         <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -13,10 +18,11 @@ export const Navbar = () => {
               Rick and Morty by Javier
           </Link>
       
-          <Link 
+          <Link
+          onClick={handleBurguer} 
           to="/character" 
           role="button" 
-          className="navbar-burger is-active" 
+          className={`navbar-burger ${ active && 'is-active'} `} 
           aria-label="menu" 
           aria-expanded="false"
           data-target="navbarBasicExample">
@@ -26,7 +32,9 @@ export const Navbar = () => {
           </Link>
         </div>
       
-        <div className="navbar-menu">
+        <div 
+        className={ `navbar-menu ${(active) && 'is-active'}` }
+        >
           <div className="navbar-end">
             <Link to="/character" className="navbar-item">
               Characters
@@ -36,6 +44,9 @@ export const Navbar = () => {
             </Link>
             <Link to="/search" className="navbar-item">
               Search
+            </Link>
+            <Link to="/favorites" className="navbar-item" >
+                  Favorites
             </Link>
           </div>   
         </div>

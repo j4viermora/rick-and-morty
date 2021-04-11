@@ -14,7 +14,7 @@ export const SearchPerson = () => {
     const { searchPage } = useSelector( state => state.characters )   
     
     return (
-        <div className="mt-5 container" style={{ height: "100vh"}}>
+        <div className="mt-5 container" >
          
          <Row>
                <Col>

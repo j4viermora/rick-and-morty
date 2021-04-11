@@ -1,6 +1,6 @@
 const initialState = {
     userName: 'Javier',
-    dataTime: new Date()
+    favorites:[]
 }
 
 const userReducer = ( state = initialState, action ) => {

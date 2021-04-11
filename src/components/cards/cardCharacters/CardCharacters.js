@@ -20,7 +20,7 @@ export const CardCharacters = ( {
                 </div>
                     <div className="card-content">
                     <div className="media-content">
-                        <p className="title is-4">{ name }</p>
+                        <p className="title is-5">{ name }</p>
                     </div>
                     <div className="content">
                         { status }
