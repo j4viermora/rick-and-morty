@@ -1,6 +1,5 @@
 import React from 'react'
 import { Col } from '../../layout/Col'
-import './styles.css'
 
 export const CardCharacters = ( {
     img,
@@ -12,10 +11,10 @@ export const CardCharacters = ( {
 } ) => {
     return (
         <Col fr={size} >
-            <div id={ img ? "card" : "card2" } >
+            <div className="card">
                 <div className="card-image">
-                    <figure>
-                        <img style={{ width: "100vw" }} src={img} alt={img} />
+                    <figure className="image" >
+                        <img src={img} alt={img} />
                     </figure>
                 </div>
                     <div className="card-content">

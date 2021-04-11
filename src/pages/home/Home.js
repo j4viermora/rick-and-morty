@@ -36,6 +36,9 @@ export const Home = () => {
             <Search />
           </Col>
         </Row>
+        
+        <progress className="progress is-info" max="5030%</progress>
+
 
         <Row>
           <Col>

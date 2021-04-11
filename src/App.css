@@ -9,18 +9,3 @@
 html{
     background-color: var(--morty-purple);
 }
-
-
-h2.title{
-    color: white;
-}
-p.title{
-    color: white;
-}
-
-
-.center{
-    display: flex;
-    justify-content: center;
-}
-
