@@ -1,4 +1,6 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { addFavorites } from '../../../actions/ui'
 import { Col } from '../../layout/Col'
 
 export const CardCharacters = ( {
@@ -7,8 +9,14 @@ export const CardCharacters = ( {
     status,
     date,
     size,
-    
 } ) => {
+
+    const dispatch = useDispatch()
+
+    const handleFavorite = () => {
+        dispatch( addFavorites( name ) )
+    }
+
     return (
         <Col fr={size} >
             <div className="card">
@@ -26,6 +34,9 @@ export const CardCharacters = ( {
                     <br/>
                     <time>{ date }</time>
                     </div>
+                    <button
+                    onClick={ handleFavorite }
+                    >Favorites</button>
                 </div>
             </div>
         </Col>

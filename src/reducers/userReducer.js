@@ -1,3 +1,5 @@
+import { types } from "../types/types"
+
 const initialState = {
     userName: 'Javier',
     favorites:[]
@@ -6,10 +8,10 @@ const initialState = {
 const userReducer = ( state = initialState, action ) => {
 
         switch( action.type ){
-            case 'hola':
+            case types.ADDTOFAVORITES:
                 return {
                     ...state,
-                    data: action.payload
+                    favorites:[ ...state.favorites, action.payload]
                 }
             default:
                 return state 

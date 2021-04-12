@@ -5,5 +5,6 @@ export const types = {
     GetEpisodes: "[Episodes] get episodes",
 
     setSearchApi: "[Search] add Result search",
-   	ADDTOFAVORITES: "[UI] add favorites"
+   	ADDTOFAVORITES: "[UI] add favorites",
+    REMOVEFAVORITE: '[UI] Remove favorites'
 }

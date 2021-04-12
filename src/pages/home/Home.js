@@ -37,7 +37,7 @@ export const Home = () => {
           </Col>
         </Row>
         
-        <progress className="progress is-info" max="5030%</progress>
+        <progress className="progress is-info" max="">30%</progress>
 
 
         <Row>
@@ -59,6 +59,7 @@ export const Home = () => {
               img={item.image}
               name={item.name}
               status={item.status}
+              id={ item.id }
             />
           ))}
         </Row>
