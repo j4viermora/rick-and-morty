@@ -12,7 +12,6 @@ import { Home } from '../pages/home/Home';
 import { SearchPerson } from '../pages/searchPerson/SearchPerson';
 import { Footer } from '../components/footer/index';
 import { FavoritesPage } from '../pages/favorites/Favorites';
-import { ToTop } from '../components/totop/ToTop';
 
 export const AppRouters = () => {
     
@@ -31,8 +30,7 @@ export const AppRouters = () => {
                         <Redirect to="/character" />            
                     </Switch>
                 </div>
-                <Footer/>
-              
+                <Footer/>       
            </Router>
         </>
     )

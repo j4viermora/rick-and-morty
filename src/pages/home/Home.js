@@ -9,7 +9,6 @@ import { CardCharacters } from '../../components/cards/cardCharacters/CardCharac
 import { InfoEpisodes } from '../../components/info_episodes';
 import { Col } from '../../components/layout/Col';
 import { Row } from '../../components/layout/Row';
-import { Pagination } from '../../components/NextPage';
 import { Search } from '../../components/search/Search';
 import { Title } from '../../components/titles';
 import useGetInfo from '../../hooks/useGetInfo';
@@ -36,10 +35,6 @@ export const Home = () => {
             <Search />
           </Col>
         </Row>
-        
-        <progress className="progress is-info" max="">30%</progress>
-
-
         <Row>
           <Col>
             <WarningHome>
@@ -52,7 +47,24 @@ export const Home = () => {
           </Col>
         </Row>
         <Row>
-          {results?.map((item) => (
+
+          {
+            (!results)
+            ? <h2>loading...</h2>
+            : results.map((item) => (
+              <CardCharacters
+                size={"is-one-quarter"}
+                key={item.id}
+                img={item.image}
+                name={item.name}
+                status={item.status}
+                id={ item.id }
+              />
+            ))
+          }
+
+
+          {/* {results?.map((item) => (
             <CardCharacters
               size={"is-one-quarter"}
               key={item.id}
@@ -61,9 +73,8 @@ export const Home = () => {
               status={item.status}
               id={ item.id }
             />
-          ))}
+          ))} */}
         </Row>
-          <Pagination />
       </div>
     );
 };

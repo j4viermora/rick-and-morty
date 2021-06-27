@@ -5,7 +5,7 @@ import store from './store/store'
 import { AppRouters } from './routers/AppRouters';
 
 import './App.css';
-import './bulma.css';
+import './styles/bulma.css';
 
 function App() {
   return (
