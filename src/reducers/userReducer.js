@@ -8,10 +8,22 @@ const userReducer = ( state = initialState, action ) => {
 
         switch( action.type ){
             case types.ADDTOFAVORITES:
-                return {
-                    ...state,
-                    favorites:[ ...state.favorites, action.payload]
+
+                const checkNotRepeat = ( element => element.name === action.payload.name )
+
+                const notRepeat = state.favorites.some( checkNotRepeat );
+
+                if( !notRepeat ){
+                    return {
+                        ...state,
+                        favorites:[ ...state.favorites, action.payload]
+                    }
+                }else{
+                    return {
+                        ...state
+                    }
                 }
+
             default:
                 return state 
         }

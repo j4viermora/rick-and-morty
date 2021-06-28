@@ -17,7 +17,6 @@ export const Episodes = () => {
     useGetInfo( path.substring(1), dispatch, types.GetEpisodes );
   
     const {results, info} = useSelector( state => state.apisoders ) 
-    console.log(info)
 
   return (
       <div  className="mt-5 container">

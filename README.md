@@ -1,26 +1,20 @@
-# Hello this is the rick and morty app
-In this app you will can search all about rick and morty, if you want dowload code and play with it, is great, something will be refactoring in the future.
+# Hola esta es una rick and morty app
+Esta app fue construida con reactjs y mucho amor
 
 ## Available Scripts
 
-In the project directory, you can run:
+Puedes iniciar el proyecto con:
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Esto activara el modo desarrollo y habilitara un entorno de desarrollo en el siguiente purto.<br />
+[http://localhost:3000](http://localhost:3000) 
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para crear los archivos de producción
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# Puedes ver este proyecto corriendo en producción
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
+[https://j4vier-rickandmorty.netlify.app/](https://j4vier-rickandmorty.netlify.app/)
 
