@@ -4,15 +4,14 @@ export const addFavorites = ( name ) => {
     
     return (dispatch, getState) => {
 
-      console.log(name)
       const { characters }= getState()
+      const data = characters.results.filter( favorito => favorito.name.includes(name) )
 
-      const data = characters.results.filter( favorito => favorito.name === name )
+      console.log(data)
 
       dispatch( {
-          type: types.ADDTOFAVORITES,
-          payload: data
+        type: types.ADDTOFAVORITES,
+        payload: data[0]
       } )
-
     }
 }

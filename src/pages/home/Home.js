@@ -10,6 +10,7 @@ import { InfoEpisodes } from '../../components/info_episodes';
 import { Col } from '../../components/layout/Col';
 import { Row } from '../../components/layout/Row';
 import { Search } from '../../components/search/Search';
+import LoadingSkeleton from '../../components/Skeleton';
 import { Title } from '../../components/titles';
 import useGetInfo from '../../hooks/useGetInfo';
 import { types } from '../../types/types';
@@ -17,15 +18,10 @@ import { types } from '../../types/types';
 
 
 export const Home = () => {
-    
-
     const dispath = useDispatch();
     const { path } = useRouteMatch();   
-    useGetInfo( path.substring(1) , dispath, types.GetInfo );   
-   
+    useGetInfo( path.substring(1) , dispath, types.GetInfo );    
     const { results , info } = useSelector( state => state.characters )     
-
-  
 
     return (
       <div className="container mt-5">
@@ -46,34 +42,23 @@ export const Home = () => {
             <InfoEpisodes {...info} path={path.substring(1)} />
           </Col>
         </Row>
+
         <Row>
+          { 
 
-          {
-            (!results)
-            ? <h2>loading...</h2>
-            : results.map((item) => (
-              <CardCharacters
-                size={"is-one-quarter"}
-                key={item.id}
-                img={item.image}
-                name={item.name}
-                status={item.status}
-                id={ item.id }
-              />
-            ))
+              (results)
+              ? results.map((item) => (
+                <CardCharacters
+                   size={"is-one-quarter"}
+                   key={item.id}
+                   img={item.image}
+                   name={item.name}
+                   status={item.status}
+                   id={ item.id }
+                   />
+                ))
+               : [...Array(22)].map( (_, index) => <LoadingSkeleton key={index} /> ) 
           }
-
-
-          {/* {results?.map((item) => (
-            <CardCharacters
-              size={"is-one-quarter"}
-              key={item.id}
-              img={item.image}
-              name={item.name}
-              status={item.status}
-              id={ item.id }
-            />
-          ))} */}
         </Row>
       </div>
     );

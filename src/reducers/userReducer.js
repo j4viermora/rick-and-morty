@@ -1,7 +1,7 @@
 import { types } from "../types/types"
 
 const initialState = {
-    favorites:[]
+    favorites: []
 }
 
 const userReducer = ( state = initialState, action ) => {
