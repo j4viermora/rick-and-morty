@@ -43,19 +43,21 @@ export const Home = () => {
             <InfoEpisodes {...info} path={path.substring(1)} />
           </Col>
         </Row>
-
         <Row>
           { 
 
               (results)
-              ? results.map((item) => (
+              ? results.map(({ id, image, name, status, specie, location, episode }) => (
                 <CardCharacters
-                   size={"is-one-quarter"}
-                   key={item.id}
-                   img={item.image}
-                   name={item.name}
-                   status={item.status}
-                   id={ item.id }
+                   size={"is-half"}
+                   key={ id }
+                   img={ image }
+                   name={ name }
+                   status={ status }
+                   id={ id }
+                   specie={ specie  }
+                   location={ location }
+                   episode={ episode }
                    path={ pathPage}
                    />
                 ))

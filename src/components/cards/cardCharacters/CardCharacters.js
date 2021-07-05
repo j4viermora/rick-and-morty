@@ -9,7 +9,8 @@ export const CardCharacters = ( {
     status,
     date,
     size,
-    path
+    path,
+
 } ) => {
 
     const dispatch = useDispatch()
@@ -20,10 +21,10 @@ export const CardCharacters = ( {
 
     return (
         <Col fr={size} >
-            <div className="card">
+            <div className="card is-flex flex-direction-row ">
                 <div className="card-image">
-                    <figure className="image" >
-                        <img src={img} alt={img} />
+                    <figure className="image is-quare" >
+                        <img src={img} alt={img} loading="lazy" />
                     </figure>
                 </div>
                     <div className="card-content">

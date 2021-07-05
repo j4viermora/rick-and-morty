@@ -35,7 +35,7 @@ export const SearchCharacter = () => {
                                     img={ result.image }
                                     name={result.name}
                                     status={ result.status }
-                                    size={ "is-half" }
+                                    size={ "is-full" }
                                     />
 
                                 ) )
@@ -55,7 +55,7 @@ export const SearchCharacter = () => {
                                     img={ result.image }
                                     name={result.name}
                                     status={ result.status }
-                                    size={ "is-half" }
+                                    size={ "is-full" }
                                     />
 
                                 ) )

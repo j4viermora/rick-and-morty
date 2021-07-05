@@ -39,7 +39,7 @@ export const FavoritesPage = () => {
                         /> )
                 }
                 {
-                    ( SELECT.EPISODERS === state ) && episodes.map( ({ name, url }) => <CardFavorite
+                    ( SELECT.EPISODERS === state ) && episodes?.map( ({ name, url }) => <CardFavorite
                         key={ name }
                         name={ name }
                         url={ url }
