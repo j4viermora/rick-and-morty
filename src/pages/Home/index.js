@@ -4,7 +4,7 @@ import { useRouteMatch } from 'react-router';
 
 
 import { Link } from 'react-router-dom';
-import { WarningHome } from '../../components/advertense/';
+import { WarningHome } from '../../components/advertense';
 import { CardCharacters } from '../../components/cards/cardCharacters/CardCharacters';
 import { InfoEpisodes } from '../../components/info_episodes';
 import { Col } from '../../components/layout/Col';
@@ -20,7 +20,8 @@ import { types } from '../../types/types';
 export const Home = () => {
     const dispath = useDispatch();
     const { path } = useRouteMatch();   
-    useGetInfo( path.substring(1) , dispath, types.GetInfo );    
+    const pathPage = path.substring(1);
+    useGetInfo( pathPage , dispath, types.GetInfo );    
     const { results , info } = useSelector( state => state.characters )     
 
     return (
@@ -55,6 +56,7 @@ export const Home = () => {
                    name={item.name}
                    status={item.status}
                    id={ item.id }
+                   path={ pathPage}
                    />
                 ))
                : [...Array(22)].map( (_, index) => <LoadingSkeleton key={index} /> ) 

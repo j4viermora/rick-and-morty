@@ -14,9 +14,11 @@ export const Episodes = () => {
     const dispatch = useDispatch();
     const { path }  = useRouteMatch();
 
-    useGetInfo( path.substring(1), dispatch, types.GetEpisodes );
+    const pathPage = path.substring(1);
+
+    useGetInfo( pathPage, dispatch, types.GetEpisodes );
   
-    const {results, info} = useSelector( state => state.apisoders ) 
+    const {results, info} = useSelector( state => state.episoders ) 
 
   return (
       <div  className="mt-5 container">
@@ -24,15 +26,15 @@ export const Episodes = () => {
         <InfoEpisodes { ...info } path={ path.substring(1) } />
         <Row>
             {
-               results?.slice(0,18).map( item => (
+               results?.slice(0,18).map( ({id, name, air_date}) => (
                     
                   <CardCharacters 
                     size={ "is-one-third" }
-                    key={ item.id }
-                    name = {item.name}
-                    date ={ item.air_date }
-                  />
-                  
+                    key={ id }
+                    name = {name}
+                    date ={ air_date }
+                    path={ pathPage }
+                  />      
                ) ) 
             }
         </Row> 

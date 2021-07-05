@@ -3,12 +3,12 @@ import { useSelector } from 'react-redux'
 import { CardCharacters } from '../../components/cards/cardCharacters/CardCharacters'
 import { Col } from '../../components/layout/Col'
 import { Row } from '../../components/layout/Row'
-import { SearchCharacter } from '../../components/searchCharacters'
+import { SearchApiCharacter } from '../../components/searchCharacters'
 
 
 
 
-export const SearchPerson = () => {
+export const SearchCharacter = () => {
 
 
     const { searchPage } = useSelector( state => state.characters )   
@@ -21,7 +21,7 @@ export const SearchPerson = () => {
                 <h2 className="title">Search </h2>
                     <hr/>
                     <div className="mb-5">
-                    <SearchCharacter/>
+                    <SearchApiCharacter/>
                     </div>
                     <div className="notification is-primary is-light">
                         <p>In this page you can search all character´s</p>

@@ -6,5 +6,6 @@ export const types = {
 
     setSearchApi: "[Search] add Result search",
    	ADDTOFAVORITES: "[UI] add favorites",
-    REMOVEFAVORITE: '[UI] Remove favorites'
+    REMOVEFAVORITE: '[UI] Remove favorites',
+    ADDTOFAVORITESEPISODES: '[UI] add favorites to episedores state'
 }

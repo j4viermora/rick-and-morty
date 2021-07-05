@@ -7,7 +7,7 @@ import { startSearchInApi } from '../../actions/infoApi';
 
 
 
-export const SearchCharacter = ( ) => {
+export const SearchApiCharacter = ( ) => {
    
     const history  = useHistory();
     const location = useLocation();

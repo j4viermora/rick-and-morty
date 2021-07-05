@@ -7,11 +7,12 @@ import {
 
 
 import { Navbar } from '../components/navbar/Navbar';
-import { Episodes } from '../pages/episodes/Episodes';
-import { Home } from '../pages/home/Home';
-import { SearchPerson } from '../pages/searchPerson/SearchPerson';
+import { Episodes } from '../pages/Episodes';
+import { Home } from '../pages/Home';
+import { SearchCharacter } from '../pages/SearchCharacter/';
 import { Footer } from '../components/footer/index';
-import { FavoritesPage } from '../pages/favorites/Favorites';
+import { FavoritesPage } from '../pages/Favorites';
+import { SingleCharacter } from '../pages/Single';
 
 export const AppRouters = () => {
     
@@ -24,8 +25,9 @@ export const AppRouters = () => {
                         
                         <Route  exact path="/character" component={ Home }/>
                         <Route  exact path="/episode" component={ Episodes }/>
-                        <Route  exact path="/search" component={ SearchPerson } />  
+                        <Route  exact path="/search" component={ SearchCharacter } />  
                         <Route  exact path="/favorites" component={ FavoritesPage } />  
+                        <Route  exact path="/character/:name" component={ SingleCharacter } />  
                                      
                         <Redirect to="/character" />            
                     </Switch>

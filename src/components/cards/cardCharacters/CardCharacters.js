@@ -9,12 +9,13 @@ export const CardCharacters = ( {
     status,
     date,
     size,
+    path
 } ) => {
 
     const dispatch = useDispatch()
 
     const handleFavorite = () => {
-        dispatch( addFavorites( name ) )
+        dispatch( addFavorites( { name, path } ) )
     }
 
     return (
@@ -35,6 +36,7 @@ export const CardCharacters = ( {
                     <time>{ date }</time>
                     </div>
                     <button
+                    className="button has-text-white is-dark"
                     onClick={ handleFavorite }
                     >Favorites</button>
                 </div>
